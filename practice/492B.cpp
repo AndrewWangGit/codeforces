@@ -11,7 +11,7 @@ int main() {
     int n, l;
     cin >> n >> l;
     int pos[n];
-    double multiplier = pow(10.0, 9);
+    // double multiplier = pow(10.0, 9);
     
     for(int i = 0; i < n; i++) {
         int lantern;
@@ -40,7 +40,8 @@ int main() {
         minRad = l - pos[n - 1];
     }
 
-    minRad = (minRad * multiplier) / multiplier;
+    // minRad = (minRad * multiplier) / multiplier;
 
-    cout << minRad;
+    //save this formating for the future
+    printf("%.10f\n", minRad);
 }
