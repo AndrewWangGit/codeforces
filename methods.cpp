@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// returns the sum of all the elements in an integer array
+int sum_elements(int arr[], int len) {
+    int sum = 0;
+    for(int i = 0; i < len; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
 // returns the value of the largest element in an integer array
 int max_element(int arr[], int len) {
     int max_element = INT_MIN;
