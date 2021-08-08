@@ -11,13 +11,12 @@ int main() {
     int n, m, a, b;
     cin >> n >> m >> a >> b;
 
-    if(n < m && n * a < b) {
+    //it doesn't make sense at all to buy the multi pass
+    if (m * a < b) {
         cout << n * a << "\n";
-    } else if(n < m) {
-        cout << b << "\n";
-    } else if((double) b / m < a) {
-        cout << ((n % m) * a) + ((n / m) * b) << "\n";
+    } else if(b * (n / m + 1) < (n / m) * b + (n % m) * a) {
+        cout << b * (n / m + 1) << "\n";
     } else {
-        cout << n * a << "\n";
+        cout << (n / m) * b + (n % m) * a << "\n";
     }
 }
