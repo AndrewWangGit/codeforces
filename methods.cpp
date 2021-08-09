@@ -11,6 +11,18 @@ int sum_elements(int arr[], int len) {
     return sum;
 }
 
+// returns the value of the smallest element in an integer array
+int min_element(int arr[], int len) {
+    int min_element = INT_MAX;
+    for(int i = 0; i < len; i++) {
+        if(min_element > arr[i]) {
+            min_element = arr[i];
+        }
+    }
+
+    return min_element;
+}
+
 // returns the value of the largest element in an integer array
 int max_element(int arr[], int len) {
     int max_element = INT_MIN;
@@ -21,6 +33,21 @@ int max_element(int arr[], int len) {
     }
 
     return max_element;
+}
+
+// returns the index of the largest element in an integer array
+int max_element_index(int arr[], int len) {
+    int max = INT_MIN;
+    int maxIndex = 0;
+
+    for(int i = 0; i < len; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
 }
 
 // returns the index of the first element in an integer array that is 
